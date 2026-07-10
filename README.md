@@ -25,6 +25,4 @@ This is a solution to the [IP address tracker challenge on Frontend Mentor](http
 - Mobile-first workflow
 - [Vanilla JS]
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
-
 ### What I learned
