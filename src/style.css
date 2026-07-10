@@ -2,7 +2,9 @@
 
 #header {
   background-image: url("../images/pattern-bg-desktop.png");
-  height: 30vh;
+
+  height: 300px;
+  min-height: 35vh;
   text-align: center;
   background-repeat: none;
   background-size: cover;
@@ -26,7 +28,7 @@ body {
 }
 
 #map {
-  height: 70vh;
+  flex: 1 0 0;
 }
 
 #map iframe {
