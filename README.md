@@ -12,7 +12,7 @@ This is a solution to the [IP address tracker challenge on Frontend Mentor](http
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://sakship2204.github.io/ip-address-tracker-master/)
 
 ## My process
 
