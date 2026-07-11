@@ -36,3 +36,26 @@ body {
   height: 100%;
   border: 0;
 }
+
+@media (max-width: 780px) {
+  #result-card {
+    flex-direction: column;
+    gap: 3rem;
+    > span {
+      border: none;
+    }
+  }
+  #header {
+    min-height: 50vh;
+    height: 500px;
+  }
+  #map {
+    min-height: 700px;
+  }
+}
+
+@media (max-width: 600px) {
+  input[name="search-bar"] {
+    width: 300px;
+  }
+}
