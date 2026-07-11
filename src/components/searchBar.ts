@@ -20,14 +20,14 @@ class searchBarComp extends HTMLElement {
 
       if (!(target instanceof HTMLInputElement)) return;
 
-      store.setState({ ipAddress: target.value });
+      store.setState({ searchedValue: target.value });
     });
 
     const searchBtn = this.querySelector<HTMLElement>(".search-btn");
     const image = this.querySelector<HTMLElement>("img");
 
     searchBtn?.addEventListener("click", () => {
-      getIPdata(store.getState().ipAddress);
+      getIPdata(store.getState().searchedValue);
     });
 
     store.subscribe((newVal) => {

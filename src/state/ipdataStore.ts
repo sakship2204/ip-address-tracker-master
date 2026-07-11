@@ -8,6 +8,7 @@ export const LoadingState = {
 };
 
 type IpDataState = {
+  searchedValue: string;
   ipAddress: string;
   coordinates: {
     lat: string;
@@ -20,6 +21,7 @@ type IpDataState = {
 };
 
 export const store = new Store<IpDataState>({
+  searchedValue: "",
   ipAddress: "",
   coordinates: {
     lat: "",

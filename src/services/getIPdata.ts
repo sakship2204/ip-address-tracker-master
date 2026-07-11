@@ -1,16 +1,19 @@
 import { LoadingState, store } from "../state/ipdataStore";
 
-export const getIPdata = async (ipAddress: string | number) => {
+export const getIPdata = async (searchValue: string) => {
+  const searchQuery = searchValue.trim();
+  const encodedSearchQuery = encodeURIComponent(searchQuery);
+
   try {
-    if (!ipAddress) return;
+    const isIP = new RegExp("^([0-9]{1,3}\\.){3}[0-9]{1,3}$");
 
     store.setState({
       loadingState: LoadingState.LOADING,
     });
     const response = await fetch(
-      typeof ipAddress == "number"
-        ? `https://geo.ipify.org/api/v2/country,city?apiKey=${import.meta.env.VITE_IPIFY_API_KEY}&ipAddress=${ipAddress}`
-        : `https://geo.ipify.org/api/v2/country,city?apiKey=${import.meta.env.VITE_IPIFY_API_KEY}&domain=${ipAddress}`,
+      isIP.test(searchQuery)
+        ? `https://geo.ipify.org/api/v2/country,city?apiKey=${import.meta.env.VITE_IPIFY_API_KEY}&ipAddress=${encodedSearchQuery}`
+        : `https://geo.ipify.org/api/v2/country,city?apiKey=${import.meta.env.VITE_IPIFY_API_KEY}&domain=${encodedSearchQuery}`,
     );
 
     const data = await response.json();
@@ -38,7 +41,7 @@ export const getIPdata = async (ipAddress: string | number) => {
     });
     alert(
       "Couldn't fetch the details for IP:" +
-        ipAddress +
+        searchQuery +
         "\n Error:" +
         e.message,
     );
