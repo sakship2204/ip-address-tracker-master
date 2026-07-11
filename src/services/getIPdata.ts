@@ -8,9 +8,9 @@ export const getIPdata = async (ipAddress: string | number) => {
       loadingState: LoadingState.LOADING,
     });
     const response = await fetch(
-      ipAddress
+      typeof ipAddress == "number"
         ? `https://geo.ipify.org/api/v2/country,city?apiKey=${import.meta.env.VITE_IPIFY_API_KEY}&ipAddress=${ipAddress}`
-        : "http://ip-api.com",
+        : `https://geo.ipify.org/api/v2/country,city?apiKey=${import.meta.env.VITE_IPIFY_API_KEY}&domain=${ipAddress}`,
     );
 
     const data = await response.json();
