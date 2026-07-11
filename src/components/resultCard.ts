@@ -7,22 +7,22 @@ class ResultCardComp extends HTMLElement {
 
               <span class=" border-e border-gray-200 me-[1.4rem] pe-[3rem] max-w-[300px]">
                 <span class="text-gray-600 text-base ps-[0.2rem]">IP Address</span>
-                <div class="text-4xl ipAddressValue">192.0.0.0</div>
+                <div class="text-4xl ipAddressValue">-----</div>
               </span>
 
               <span class=" border-e border-gray-200 me-[1.4rem] pe-[3rem] max-w-[300px]">
                <span class="text-gray-600 text-base ps-[0.2rem]">Location</span>
-                <div class="text-4xl locationValue">192.0.0.0</div>
+                <div class="text-4xl locationValue">---</div>
               </span>
 
               <span class=" border-e border-gray-200 me-[1.4rem] pe-[3rem] max-w-[300px]">
                 <span class="text-gray-600 text-base ps-[0.2rem]">Time zone</span>
-                <div class="text-4xl timeZoneValue">192.0.0.0</div>
+                <div class="text-4xl timeZoneValue">----</div>
               </span>
 
               <span class=" me-[1.4rem] pe-[3rem] max-w-[300px]">
                 <span class="text-gray-600 text-base ps-[0.2rem]">ISP</span>
-                <div class="text-4xl ISPValue">192.0.0.0</div>
+                <div class="text-4xl ISPValue">----</div>
               </span>
             </div>
         `;
@@ -33,10 +33,10 @@ class ResultCardComp extends HTMLElement {
     const ISPEl = document.querySelector(".ISPValue");
 
     store.subscribe((newVal) => {
-      ipAddressEl.textContent = newVal.ipAddress;
-      locationEl.textContent = newVal.location;
-      timeZoneEl.textContent = newVal.timeZone;
-      ISPEl.textContent = newVal.isp;
+      ipAddressEl.textContent = newVal.ipAddress || "----";
+      locationEl.textContent = newVal.location || "----";
+      timeZoneEl.textContent = newVal.timeZone || "----";
+      ISPEl.textContent = newVal.isp || "----";
     });
   }
 }

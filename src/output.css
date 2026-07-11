@@ -207,6 +207,18 @@
   .h-screen {
     height: 100vh;
   }
+  .w-\[1\.3rem\] {
+    width: 1.3rem;
+  }
+  .w-\[1\.5rem\] {
+    width: 1.5rem;
+  }
+  .w-\[2rem\] {
+    width: 2rem;
+  }
+  .w-\[4rem\] {
+    width: 4rem;
+  }
   .w-\[450px\] {
     width: 450px;
   }
@@ -290,6 +302,9 @@
   }
   .text-white {
     color: var(--color-white);
+  }
+  .opacity-50 {
+    opacity: 50%;
   }
   .outline {
     outline-style: var(--tw-outline-style);

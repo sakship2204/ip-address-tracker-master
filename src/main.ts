@@ -2,7 +2,7 @@ import "./style.css";
 
 import "./components/searchBar";
 import "./components/resultCard";
-import { getIPdata } from "./services/getIPdata";
+
 import "./components/mapView";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
@@ -24,5 +24,3 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
 
 
 `;
-
-console.log(getIPdata());
