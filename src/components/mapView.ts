@@ -13,7 +13,7 @@ class MapViewComp extends HTMLElement {
     const iframeElement = this.querySelector<HTMLElement>(".map-top");
 
     store.subscribe((newVal) => {
-      iframeElement.setAttribute(
+      iframeElement?.setAttribute(
         "src",
         `${srcPrefix}${newVal.coordinates.lat},${newVal.coordinates.long}`,
       );

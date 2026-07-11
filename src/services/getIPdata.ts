@@ -1,6 +1,6 @@
 import { LoadingState, store } from "../state/ipdataStore";
 
-export const getIPdata = async (ipAddress = null) => {
+export const getIPdata = async (ipAddress: string | number) => {
   try {
     if (!ipAddress) return;
 

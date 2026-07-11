@@ -27,16 +27,16 @@ class ResultCardComp extends HTMLElement {
             </div>
         `;
 
-    const ipAddressEl = document.querySelector(".ipAddressValue");
-    const locationEl = document.querySelector(".locationValue");
-    const timeZoneEl = document.querySelector(".timeZoneValue");
-    const ISPEl = document.querySelector(".ISPValue");
+    const ipAddressEl = this.querySelector(".ipAddressValue");
+    const locationEl = this.querySelector(".locationValue");
+    const timeZoneEl = this.querySelector(".timeZoneValue");
+    const ISPEl = this.querySelector(".ISPValue");
 
     store.subscribe((newVal) => {
-      ipAddressEl.textContent = newVal.ipAddress || "----";
-      locationEl.textContent = newVal.location || "----";
-      timeZoneEl.textContent = newVal.timeZone || "----";
-      ISPEl.textContent = newVal.isp || "----";
+      if (ipAddressEl) ipAddressEl.textContent = newVal.ipAddress || "----";
+      if (locationEl) locationEl.textContent = newVal.location || "----";
+      if (timeZoneEl) timeZoneEl.textContent = newVal.timeZone || "----";
+      if (ISPEl) ISPEl.textContent = newVal.isp || "----";
     });
   }
 }
