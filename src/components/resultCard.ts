@@ -7,12 +7,12 @@ class ResultCardComp extends HTMLElement {
 
               <span class=" border-e border-gray-200 me-[1.4rem] pe-[3rem] max-w-[300px]">
                 <span class="text-gray-600 text-base ps-[0.2rem]">IP Address</span>
-                <div class="text-4xl ipAddressValue">-----</div>
+                <div class="text-4xl ipAddressValue">----</div>
               </span>
 
               <span class=" border-e border-gray-200 me-[1.4rem] pe-[3rem] max-w-[300px]">
                <span class="text-gray-600 text-base ps-[0.2rem]">Location</span>
-                <div class="text-4xl locationValue">---</div>
+                <div class="text-4xl locationValue">----</div>
               </span>
 
               <span class=" border-e border-gray-200 me-[1.4rem] pe-[3rem] max-w-[300px]">
