@@ -26,7 +26,7 @@
                 <div class="text-4xl ISPValue">----</div>
               </span>
             </div>
-        `;let e=this.querySelector(`.ipAddressValue`),t=this.querySelector(`.locationValue`),r=this.querySelector(`.timeZoneValue`),i=this.querySelector(`.ISPValue`);n.subscribe(n=>{e&&(e.textContent=n.ipAddress||`----`),t&&(t.textContent=n.location||`----`),r&&(r.textContent=n.timeZone||`----`),i&&(i.textContent=n.isp||`----`)})}};customElements.get(`result-card`)||customElements.define(`result-card`,a);var o=class extends HTMLElement{connectedCallback(){let e=`https://www.google.com/maps/embed/v1/place?key=AIzaSyDq6z52ILrMtGI-4SPjiFEo4r2vhIEDhSA
+        `;let e=this.querySelector(`.ipAddressValue`),t=this.querySelector(`.locationValue`),r=this.querySelector(`.timeZoneValue`),i=this.querySelector(`.ISPValue`);n.subscribe(n=>{e&&(e.textContent=n.ipAddress||`----`),t&&(t.textContent=n.location||`----`),r&&(r.textContent=n.timeZone||`----`),i&&(i.textContent=n.isp||`----`)})}};customElements.get(`result-card`)||customElements.define(`result-card`,a);var o=class extends HTMLElement{connectedCallback(){let e=`https://www.google.com/maps/embed/v1/place?key=AIzaSyBxXjazDZoGT5xgTmRLW1EsTq-PERN5Uj4
     &q=`;this.innerHTML=` <iframe class="map-top"
     loading="lazy"
     referrerpolicy="strict-origin-when-cross-origin"
